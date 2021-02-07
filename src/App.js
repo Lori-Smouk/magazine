@@ -79,14 +79,20 @@ function App(props) {
         }
     ]);
 
-    const setBought = (id) => setDatabase(database.map(item => item.id === id ? {...item, bought: !item.bought} : item));
+    const setBought = (id) => {
+        setDatabase(
+            database.map(item => {
+                return item.id === id ? {...item, bought: !item.bought} : item;
+            })
+        );
+    };
 
 
 
     return (
     <div className="app">
-      <Header datebase={database} setDatebase={setDatabase}/>
-      <Content datebase={database} setDatebase={setDatabase}  setBought={setBought}/>
+      <Header database={database}/>
+      <Content database={database} setDatabase={setDatabase}  setBought={setBought}/>
     </div>
   );
 }

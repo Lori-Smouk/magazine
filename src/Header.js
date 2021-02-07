@@ -11,7 +11,7 @@ function Header(props) {
         <div className="header">
             <Logo />
             <Menu />
-            <Checkout datebase={props.datebase}/>
+            <Checkout database={props.database}/>
             <a href="#" className="logout"> выход </a>
         </div>
     );

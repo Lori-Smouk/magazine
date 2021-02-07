@@ -12,7 +12,7 @@ function Card(props) {
                 <div className="card-name">{props.product.name}</div>
                 <div className="card-rating">{props.product.rating}</div>
                 <div className="card-price">{props.product.price} ₽</div>
-                <Button setBought={props.setBought} idBase={props.product.id} bougtBase={props.product.bought}/>
+                <Button setBought={props.setBought} idBase={props.product.id} boughtBase={props.product.bought}/>
             </div>
         </div>
     );
